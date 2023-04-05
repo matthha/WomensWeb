@@ -1,0 +1,251 @@
+
+body{
+    margin: 30px;
+    padding: 6px;
+    background-color: lightgray;
+    color: black;
+}
+#b0 {
+    display: none;
+}
+main {
+    font-weight: bold;
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+.term {
+    display: flex;
+    flex-direction: column;
+    column-gap: 5px;
+    border-bottom: 5px;
+    border-style:solid;
+    border-image: linear-gradient(to right, rgb(255, 132, 0) 60%, transparent 50%) 100% 1;
+}
+button{
+    margin: 3px;
+}
+.container {
+    display: grid; 
+    grid-template-columns: 1fr;
+}
+div.card {
+    padding: 15px;
+}    
+h1 {
+    font-size: 25px;
+}
+h2{
+    /* transition: all 0.5s ease; */
+    display: inline-block;
+    font-size: 19px;
+    margin: 12px 2px 4px 0px;
+    padding: 3px;
+    text-decoration-line: underline;
+    background-color: blanchedalmond; 
+    border-radius: 6px;
+    
+}
+@keyframes shake {
+    0% {transform: skewX(0deg)}
+    50% {transform: skewX(25deg)}
+    100% {transform: skewX(0deg)}
+}
+
+h2:hover {
+    background-color: rgb(255, 255, 255);
+    animation: shake;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+}
+
+h2::first-letter{
+    font-size: 150%;
+}
+p {
+    font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    font-size: 16px;
+    border-radius: 12px;
+    padding: 12px;
+    /* background: rgb(249, 243, 243);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgb(164, 164, 164) 0%, rgba(74, 74, 73, 0.392) 70%, rgb(128, 127, 128) 100%); */
+}
+
+    img {
+        display: block;
+        justify-self: center;
+        border-radius: 10px;
+        padding: 20px;
+        border: solid 2px;
+        border-style: dashed;
+        width: 200px;
+        margin: auto;
+        
+    }
+    div.card:nth-child(2n+2) img{
+        border: solid 10px rgb(168, 168, 157);
+        border-radius: 10px;
+        padding: 12px;
+
+    }
+    main img:hover, div.card img:hover {
+        border: solid 22px rgb(168, 111, 62);
+        padding: 0px;
+        
+    }
+    .bigpic {
+        width: auto;
+        grid-column: 1 / -1;
+    }
+    .bigpic:hover {
+        animation: shake;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+div.card:nth-child(3n+3) {
+    background-color: rgba(74, 74, 73, 0.392);
+    border-radius: 60px 5px;
+
+}
+div.card:nth-child(3n+2) {
+    background-color: rgba(254, 254, 254, 0.392);
+    border-radius: 5px 60px;
+
+}
+
+ol {
+    margin: 6px;
+}
+figure{
+    margin: 20px;
+}
+ul {
+    list-style-type: none;
+    font-size: 14px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
+nav > ul > li > a {
+    text-decoration-line: none;
+    font-size: 15px;
+    border-width: 5px 0px 0px 7px
+}
+li a p{
+    padding: 0px 10px;
+    color: darkred;
+    background-color: white;
+    border-radius: 20px;
+    text-align: center
+    ;
+}
+body div {
+    margin: 10pt;
+    justify-self: stretch;
+
+}
+dt {
+    color: blue;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}
+dl {
+    color: black;
+    
+}
+footer {
+    border: 5px solid black;
+    font-size: 8px;
+}
+nav{
+    
+    color: red;
+}
+
+dd:first-child {
+    text-transform: uppercase;
+}
+
+dd > p {
+    font-family: 'Quicksand', sans-serif;
+}
+span {
+    display: flex;
+    align-items: center;
+}
+.current {
+    order: 0;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+    text-decoration-style:wavy;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 2px;
+    
+}
+
+.skipper{
+    position:absolute;
+    left: -1000px;
+}
+
+.skipper:focus{
+    position:relative;
+    left:0px;
+
+}
+
+.bgimg {
+    background-image: url(/images/_Paper.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+   .bigpic:hover, h2:hover {
+        animation: none;
+    }
+}
+@media screen and (min-width: 700px) {
+    nav > ul{
+        flex-direction: row;
+        align-items: self-end
+    }
+    #b0 {
+        display: block;
+    }
+    .container {
+        display: grid; 
+        grid-template-columns: 3fr 3fr 3fr;
+        }
+    nav > ul > li > a {
+        text-decoration-line: none;
+        font-size: 25px;
+        border-width: 5px 0px 0px 7px
+    }
+
+    .current{
+        font-size: 36px;
+    }
+    img{
+        width: 330px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    nav > ul{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+   
+   
+    .container {
+        grid-template-columns: 3fr 3fr 3fr;
+    }
+}
