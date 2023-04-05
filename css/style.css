@@ -202,7 +202,7 @@ span {
 }
 
 .bgimg {
-    background-image: url(/images/_Paper.jpg);
+    background-image: url(../images/_Paper.jpg);
     background-attachment: fixed;
     background-size: cover;
 }
